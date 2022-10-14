@@ -3,17 +3,19 @@
 }
 
 body {
-    width:100%;
+    width: 100%;
     margin: 0px;
-    
+
 }
+
 main {
     display: flex;
 }
+
 header {
     width: 100%;
-    background-image: linear-gradient(to right, lightblue, darkblue );
-    text-align: center;  
+    background-image: linear-gradient(to right, lightblue, darkblue);
+    text-align: center;
 }
 
 h1 {
@@ -21,6 +23,7 @@ h1 {
     color: white;
     margin: 0px;
 }
+
 .searchBox {
     width: 30%;
     align-items: flex-start;
@@ -40,11 +43,8 @@ h3 {
     border: none;
     border-radius: 3px;
 }
+
 .buttonFormat {
     border-bottom: solid;
     border-color: lightslategrey;
 }
-
-
-
-

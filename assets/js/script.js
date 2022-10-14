@@ -119,8 +119,6 @@ function getFiveDayForecast(lat, lon) {
     fetch(getUrl)
         .then(response => response.json())
         .then((data) => {
-            //var dailyForecast = data.list;
-            //var city = city.data.name;
             console.log(data);
             renderForecast(data);
         })
@@ -158,11 +156,6 @@ function getCityData(city) {
 
         });
 }
-
-
-
-
-
 
 // Adds getCityData function to retrieve the latitude and longitude coordinates. 
 searchSubmit.addEventListener("submit", function (e) {
