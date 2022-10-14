@@ -8,18 +8,6 @@ var fiveDayForecast = document.getElementById("forecastCard");
 var APIkey = "a387c7beacd4ee8b8b0a6daeb877befb";
 var cities = [];
 
-var loadCities = function () {
-    var citiesLoaded = localStorage.getItem("cities")
-    if (!citiesLoaded) {
-        return false;
-    }
-    citiesLoaded = JSON.parse(citiesLoaded);
-
-    for (var i = 0; i < citiesLoaded.length; i++) {
-        displaySearchedCities(citiesLoaded[i])
-        cities.push(citiesLoaded[i])
-    }
-}
 // Function to display the CURRENT weather data fetched from OpenWeather api.
 function renderCurrentWeather(city, data) {
     console.log(city, data);
