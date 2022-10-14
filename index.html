@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>Document</title>
+</head>
+
+<body>
+    <header class="header">
+        <h1>Weather Dashboard</h1>
+    </header>
+    <main>
+        <!--container-->
+        <div class="flex-column searchBox">
+            <div class="p-2">
+                <h3>Search for a City:</h3>
+            </div>
+            <!--search form-->
+            <form id="searchSubmit">
+                <div class="p-2"><input type="text" id="citySearch" class="form-control inputBox" /></div>
+                <div class="p-2 buttonFormat"><button type="submit" value="Submit" id="searchBtn"
+                        class="btn btn-info submitBtn">Search</button></div>
+            </form>
+            <!--search history div-->
+            <div id="searchHistory" class="p-2"></div>
+        </div>
+
+        <div id="forecast" class="flex-column container">
+            <div class="p-2">
+                <div id="today">
+                    <!--displays current weather-->
+                </div>
+            </div>
+            <h4 id="fiveDay" class="mt-1"></h4>
+                <div id="forecastCard" class="row">
+                    <!--displays five day forecast-->
+                </div>
+            </div>
+        </div>
+    </main>
+   
+
+    <!--use day.js to easily format dates-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+        integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script src="./assets/js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    width:100%;
+    margin: 0px;
+    
+}
+main {
+    display: flex;
+}
+header {
+    width: 100%;
+    background-image: linear-gradient(to right, lightblue, darkblue );
+    text-align: center;  
+}
+
+h1 {
+    padding: 7px 7px 10px;
+    color: white;
+    margin: 0px;
+}
+.searchBox {
+    width: 30%;
+    align-items: flex-start;
+    margin-right: 0px;
+}
+
+h3 {
+    font-size: 25px;
+    margin-top: 10px;
+    margin-bottom: 0px;
+}
+
+.submitBtn {
+    width: 100%;
+    background-color: lightblue;
+    color: white;
+    border: none;
+    border-radius: 3px;
+}
+.buttonFormat {
+    border-bottom: solid;
+    border-color: lightslategrey;
+}
+
+.text-reponsive {
+    font-size: 10px;
+}
+
+
