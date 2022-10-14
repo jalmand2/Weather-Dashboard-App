@@ -78,7 +78,7 @@ function renderForecast(data) {
         var iconForecast = data.list[i].weather[0].icon;
 
         var cardEl = document.createElement("div");
-        cardEl.setAttribute("class", "card col-xl-2 col-md-5 col-sm-10 mx-2 my-1 bg-primary text-white text-left");
+        cardEl.setAttribute("class", "card col-xl-2 col-md-5 col-sm-10 mx-2 my-1 bg-primary text-white text-left h-50");
 
         var cardBodyEl = document.createElement("div");
         cardBodyEl.setAttribute("class", "card-body");
