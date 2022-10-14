@@ -10,7 +10,7 @@ N/A
 
 ## Usage
 
-![alt text](./assets/images/work-scheduler.jpg)
+![alt text](./assets/images/Weather%20Dashboard.jpg)
 [Link to deployed application](https://jalmand2.github.io/weather-dashboard-app/)
 
 ## Credits
