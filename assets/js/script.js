@@ -75,7 +75,7 @@ function renderForecast(data) {
         cardDateEl.textContent = moment().add(i, "days").format("MM/DD/YYYY");
 
         var cardIconEl = document.createElement("img");
-        cardIconEl.setAttribute("src", "http://openweathermap.org/img/wn/" + iconForecast + "@2x.png");
+        cardIconEl.setAttribute("src", "https://openweathermap.org/img/wn/" + iconForecast + "@2x.png");
 
         var cardTempEl = document.createElement("p");
         cardTempEl.setAttribute("class", "card-text");
@@ -103,7 +103,7 @@ function renderForecast(data) {
     }
 }
 function getFiveDayForecast(lat, lon) {
-    var getUrl = "http://api.openweathermap.org/data/2.5/forecast?lat=" + lat + "&lon=" + lon + "&units=imperial&appid=" + APIkey;
+    var getUrl = "https://api.openweathermap.org/data/2.5/forecast?lat=" + lat + "&lon=" + lon + "&units=imperial&appid=" + APIkey;
     fetch(getUrl)
         .then(response => response.json())
         .then((data) => {
@@ -116,7 +116,7 @@ function getWeather(city, lat, lon) {
     console.log(city, lat, lon);
     // fetch for weather with weather API 
     // api url
-    var getURL = "http://api.openweathermap.org/data/2.5/weather?lat=" + lat + "&lon=" + lon + "&units=imperial&appid=" + APIkey;
+    var getURL = "https://api.openweathermap.org/data/2.5/weather?lat=" + lat + "&lon=" + lon + "&units=imperial&appid=" + APIkey;
     // fetch, using the api url, .then that returns the response as json, .then that calls renderItems(city, data)
     fetch(getURL)
         .then(response => response.json())
@@ -127,7 +127,7 @@ function getWeather(city, lat, lon) {
         })
 }
 function getCityData(city) {
-    fetch("http://api.openweathermap.org/geo/1.0/direct?q=" + city + "&appid=" + APIkey)
+    fetch("https://api.openweathermap.org/geo/1.0/direct?q=" + city + "&appid=" + APIkey)
         .then((response) => {
             if (!response.ok) {
                 throw new Error(`HTTP error! Status: ${response.status}`);
