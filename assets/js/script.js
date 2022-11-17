@@ -26,7 +26,7 @@ function renderCurrentWeather(city, data) {
     var currentDate = moment().format("MM/DD/YYYY");
     var imageIcon = document.createElement("img");
     imageIcon.setAttribute("src", "")
-    imageIcon.setAttribute("src", "http://openweathermap.org/img/wn/" + iconCurrent + "@2x.png")
+    imageIcon.setAttribute("src", "https://openweathermap.org/img/wn/" + iconCurrent + "@2x.png")
     headerCityDate.textContent = city + "(" + currentDate + ")";
 
     divCityHeader.appendChild(headerCityDate)
