@@ -7,6 +7,12 @@ var fiveDayForecast = document.getElementById("forecastCard");
 
 var APIkey = "a387c7beacd4ee8b8b0a6daeb877befb";
 var cities = [];
+// var search = "";
+
+function storeSearchHistory(city, data) {
+localStorage.setItem(city, JSON.stringify(data));
+
+}
 
 // Function to display the CURRENT weather data fetched from OpenWeather api.
 function renderCurrentWeather(city, data) {
@@ -29,9 +35,10 @@ function renderCurrentWeather(city, data) {
     imageIcon.setAttribute("src", "https://openweathermap.org/img/wn/" + iconCurrent + "@2x.png")
     headerCityDate.textContent = city + "(" + currentDate + ")";
 
+
     divCityHeader.appendChild(headerCityDate)
     divCityHeader.appendChild(imageIcon)
-    currentWeather.appendChild(divCityHeader)
+    currentWeather.appendChild(divCityHeader) //was divCityHeader
 
     var currentDiv = document.createElement("div")
     var currentTempEl = document.createElement("p");
@@ -43,14 +50,13 @@ function renderCurrentWeather(city, data) {
     currentDiv.appendChild(humidityEl);
     currentDiv.appendChild(windSpeedEl);
 
-    currentWeather.appendChild(currentDiv);
+    currentWeather.appendChild(currentDiv); // was currentDiv
     // give them their appropriate content
     currentTempEl.textContent = "Temperature: " + currentTemp + "°F";
     humidityEl.textContent = "Humidity: " + humidity + "%";
     windSpeedEl.textContent = "Wind Speed: " + windSpeed + " MPH";
 
-
-};
+}
 // Function to display 5 day forecast.
 function renderForecast(data) {
     // set up elements for this section
@@ -107,13 +113,13 @@ function getFiveDayForecast(lat, lon) {
     fetch(getUrl)
         .then(response => response.json())
         .then((data) => {
-            console.log(data);
+            // console.log(data);
             renderForecast(data);
         })
 }
 // gets weather based off of coordinates
 function getWeather(city, lat, lon) {
-    console.log(city, lat, lon);
+    // console.log(city, lat, lon);
     // fetch for weather with weather API 
     // api url
     var getURL = "https://api.openweathermap.org/data/2.5/weather?lat=" + lat + "&lon=" + lon + "&units=imperial&appid=" + APIkey;
@@ -121,12 +127,14 @@ function getWeather(city, lat, lon) {
     fetch(getURL)
         .then(response => response.json())
         .then((data) => {
-            console.log(data);
+            // console.log(data);
             getFiveDayForecast(lat, lon);
             renderCurrentWeather(city, data);
+            storeSearchHistory(city, data);
         })
 }
 function getCityData(city) {
+    // var city = search;
     fetch("https://api.openweathermap.org/geo/1.0/direct?q=" + city + "&appid=" + APIkey)
         .then((response) => {
             if (!response.ok) {
@@ -139,17 +147,18 @@ function getCityData(city) {
             //var city = data[0].name;
             var lat = data[0].lat;
             var lon = data[0].lon;
-            console.log(data);
+            var search = data[0].name;
+            // console.log(data);
             getWeather(city, lat, lon);
-
         });
 }
+
 
 // Adds getCityData function to retrieve the latitude and longitude coordinates. 
 searchSubmit.addEventListener("submit", function (e) {
     e.preventDefault();
     var city = cityInput.value.trim();
-    console.log(city);
+    // console.log(city);
     getCityData(city);
-
 })
+

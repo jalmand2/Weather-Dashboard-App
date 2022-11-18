@@ -48,3 +48,7 @@ h3 {
     border-bottom: solid;
     border-color: lightslategrey;
 }
+#today {
+    display: flex;
+    justify-content: flex-start;
+}
