@@ -20,7 +20,7 @@ This image displays the deployed application.
 This second image displays the searched cities saved to the local storage. 
 ![Local Storage](./assets/images/Local%20Storage%20Weather%20Dashboard.png)
 
-Click on this link to view the deployed application is: https://jalmand2.github.io/weather-dashboard-app/
+Click on this link to view the deployed application is: https://jalmand2.github.io/Weather-Dashboard-App/
 
 ## Credits
 
