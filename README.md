@@ -1,4 +1,7 @@
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 # Weather Dashboard
+
 
 ## Description
 
@@ -6,13 +9,15 @@ The motivation of this project was to create an application that pulls weather d
 
 ## Installation
 
-N/A
+No installations necessary. 
 
 ## Usage
-Below you can see various screenshots of the functionality of the Weather Dashboard. The first image displays the deployed application.  
+Below you can see two screenshots of the functionality of the Weather Dashboard. 
+
+This image displays the deployed application.  
 ![Deployed Image](./assets/images/Weather%20Dashboard.png)
 
-This second image displays the searched cities saving to local storage. 
+This second image displays the searched cities saved to the local storage. 
 ![Local Storage](./assets/images/Local%20Storage%20Weather%20Dashboard.png)
 
 Click on this link to view the deployed application is: https://jalmand2.github.io/weather-dashboard-app/
@@ -23,6 +28,6 @@ N/A
 
 ## License
 
-MIT License
+Distributed under the MIT License. See [LICENSE](./LICENSE) for more information.
 
 
