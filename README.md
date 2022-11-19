@@ -9,9 +9,13 @@ The motivation of this project was to create an application that pulls weather d
 N/A
 
 ## Usage
+Below you can see various screenshots of the functionality of the Weather Dashboard. The first image displays the deployed application.  
+![Deployed Image](./assets/images/Weather%20Dashboard.png)
 
-![alt text](./assets/images/Weather%20Dashboard.jpg)
-[Link to deployed application](https://jalmand2.github.io/weather-dashboard-app/)
+This second image displays the searched cities saving to local storage. 
+![Local Storage](./assets/images/Local%20Storage%20Weather%20Dashboard.png)
+
+Click on this link to view the deployed application is: https://jalmand2.github.io/weather-dashboard-app/
 
 ## Credits
 
