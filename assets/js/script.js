@@ -162,7 +162,7 @@ function fetchCoords(search) {
                     .then(function (data) {
                         // Returns nothing if the data has no information, ex: city does not exist in api
                         if (data.length === 0) {
-                            alert('Unknown City. \nBe sure to only type the city name without the State.\n\nIf issue persists please try another city.');
+                            alert('Something went wrong, please try again!');
                             return;
                         }
                         lat = data[0].lat;
